@@ -48,6 +48,7 @@ const theme = createTheme();
 const inline = { display:'inline', margin:0 };
 const gutter = '25px';
 const images = {
+  nyan: require('../assets/nyancat.gif'),
   background: require('../assets/Blue-Computer-Backgrounds2.jpg'),
   futurama: require('../assets/Futurama accomplish nothing-5482.png'),
   showreel1: require('../assets/showreel_2014-5270.png'),
@@ -67,6 +68,14 @@ const images = {
   dennis: require('../assets/Icycle2_AwayJS-1439.png'),
   dennis_tris: require('../assets/Icycle2_AwayJS-1439_tris.png'),
   icycle1_tris: require('../assets/Screenshot 2016-09-01 02.57.01-2343.png'),
+  sunflower: require('../assets/sunflower.png'),
+  sunflower_screenshot1: require('../assets/Screenshot 2018-02-27 11.41.47-5973.png'),
+  sunflower_screenshot2: require('../assets/Screenshot 2018-02-27 11.43.39-5978.png'),
+  sunflower_screenshot3: require('../assets/Screenshot 2018-02-27 11.48.42-5987.png'),
+  mathswhizz: require('../assets/maths-whizz_with_cubes_on_top-6037.png'),
+  mathswhizz_screenshot1: require('../assets/Screenshot 2018-02-27 11.59.12-6044.png'),
+  mathswhizz_screenshot2: require('../assets/Screenshot 2018-02-27 12.00.02-6056.png'),
+  mathswhizz_screenshot3: require('../assets/Screenshot 2018-02-27 12.00.54-6064.png'),
 };
 
 export default class Presentation extends React.Component {
@@ -124,6 +133,9 @@ export default class Presentation extends React.Component {
             </TableBody>
           </Table>
         </Slide> */}
+        <Slide bgDarken='0.7'  bgImage={images.nyan}>
+          <Heading size={1}>Vectors</Heading>
+        </Slide>
         <Slide bgImage={images.icycle1}>
         </Slide>
         <Slide bgImage={images.icycle2}>
@@ -136,125 +148,47 @@ export default class Presentation extends React.Component {
           <Image src={images.dennis_tris} height="500px"/>
         </Layout>
         <Heading size={3} padding="20px">
-            <Link href="https://github.com/awayjs">Tessellations whatcha want</Link>
+            <Link href="../awayjs-examples-bin/AWD3ViewerMinimal.html">Tessellations whatcha want</Link>
         </Heading>
         </Slide>
-        <Slide bgImage={images.icycle1_tris}>
+        <Slide bgDarken='0.7'  bgImage={images.nyan}>
+          <Heading size={1}>2D &amp; 3D</Heading>
         </Slide>
         <Slide>
-          <Heading size={2}>Dev setup with npm</Heading>
-          <List>
-            <ListItem>The <Code>awayjs-full</Code> module</ListItem>
-            <ListItem>Creating npm links (by hand or with batch script)</ListItem>
-            <ListItem>Linking <Code>awayjs-full</Code> module to an AwayJS project</ListItem>
-            <ListItem>Using watchers to update modules</ListItem>
-          </List>
+          <Image src={images.sunflower} height="200px" padding="20px"/>
+          <Layout>
+            <Link href="../sprint_5/Mo.html" margin="30px"><Image src={images.sunflower_screenshot1} height="200px"/></Link>
+            <Link href="../sprint_5/Fo.html" margin="30px"><Image src={images.sunflower_screenshot2} height="200px"/></Link>
+            <Link href="../sprint_5/So.html" margin="30px"><Image src={images.sunflower_screenshot3} height="200px"/></Link>
+          </Layout>
+          <Heading size={3} padding="20px">
+            <Link href="https://www.sunflowerlearning.com">http://www.sunflowerlearning.com/</Link>
+          </Heading>
+        </Slide>
+        <Slide bgDarken='0.7'  bgImage={images.nyan}>
+          <Heading size={1}>Imports &amp; Optimisation</Heading>
         </Slide>
         <Slide>
-          <Text>Break</Text>
+          <Image src={images.mathswhizz} height="200px" padding="20px"/>
+          <Layout>
+            <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=1" margin="30px"><Image src={images.mathswhizz_screenshot1} height="200px"/></Link>
+            <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=5" margin="30px"><Image src={images.mathswhizz_screenshot2} height="200px"/></Link>
+            <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=8" margin="30px"><Image src={images.mathswhizz_screenshot3} height="200px"/></Link>
+          </Layout>
+          <Heading size={3} padding="20px">
+            <Link href="https://www.whizz.com">http://www.whizz.com</Link>
+          </Heading>
         </Slide>
-        <Slide>
-          <Heading size={2}>Introduction to TypeScript</Heading>
-          <Text>
-            <Link href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">
-              Typescript in 5 minutes
+        <Slide bgDarken='0.7'  bgImage={images.nyan}>
+          <Heading size={1}>Future steps</Heading>
+        </Slide>
+        <Slide bgDarken='0.7' bgImage={images.background}>
+          <Heading size={1}>Thank you</Heading>
+          <Heading size={3}>
+            <Link href="https://www.twitter.com/robnet">
+              @robnet
             </Link>
-          </Text>
-        </Slide>
-        <CodeSlide textSize="20"
-            transition={[]}
-            lang="typescript"
-            code={require("raw-loader!../assets/Rectangle.ts")}
-            ranges={[
-              { loc: [0, 572], title: "Rectangle.ts" },
-              { loc: [0, 1], title: "ES6 import" },
-              { loc: [46, 47], title: "Class definition" },
-              { loc: [71, 72], title: "Property" },
-              { loc: [105, 114], title: "Getter / Setter" },
-              { loc: [363, 370], title: "Method with point arg"  },
-              // ...
-            ]}/>
-        <CodeSlide textSize="20"
-            transition={[]}
-            lang="typescript"
-            code={require("raw-loader!../assets/TextureAtlas.ts")}
-            ranges={[
-              { loc: [0, 140], title: "TextureAtlas.ts" },
-              { loc: [0, 3], title: "imports from module dependencies" },
-              { loc: [8, 11], title: "primitive object declarations" },
-              { loc: [42, 43], title: "static keyword" },
-              { loc: [76, 81], title: "constructor keyword" }
-              // ...
-            ]}/>
-        <Slide>
-          <Heading size={2} fit>Typescript tricks in VS Code</Heading>
-          <List>
-            <ListItem>Code hints from comments</ListItem>
-            <ListItem>Jump to declaration</ListItem>
-            <ListItem>Advanced intellisense</ListItem>
-            <ListItem>Auto imports</ListItem>
-          </List>
-        </Slide>
-        <Slide>
-          <Text>Lunch</Text>
-        </Slide>
-        <CodeSlide textSize="20"
-            transition={[]}
-            lang="typescript"
-            code={require("raw-loader!../assets/Basic_View.ts")}
-            ranges={[
-              { loc: [0, 141], title: "typical boilerplate setup (Basic_View.ts)" },
-              { loc: [38, 44], title: "imports using awayjs-full" },
-              { loc: [64, 71], title: "init view and camera" },
-              { loc: [72, 78], title: "add objects to the scene" },
-              { loc: [78, 83], title: "add resize listener" },
-              { loc: [128, 135], title: "add resize listener" },
-              { loc: [84, 86], title: "setup RAF callback" },
-              { loc: [96, 102], title: "setup RAF callback" },
-              { loc: [87, 91], title: "load some assets" },
-              { loc: [102, 123], title: "load some assets" }
-              // ...
-            ]}/>
-        <Slide>
-          <Heading size={2}>AwayJS basics</Heading>
-          <List>
-            <ListItem>Moving / rotating / scaling objects</ListItem>
-            <ListItem>Mouse Events, Keyboard Events, Scene Events</ListItem>
-            <ListItem>2D setup for loading AWDs / SWFs</ListItem>
-          </List>
-        </Slide>
-        <Slide>
-          <Text>Break</Text>
-        </Slide>
-        <Slide>
-          <Heading size={2}>Stage Exploration</Heading>
-          <Text>The <Code>Stage</Code> object wraps a single canvas</Text>
-          <Text>GPU methods are exposed through the <Code>IContext</Code> interface.</Text>
-          <Text>Stage abstractions hold asset properties unique to each stage</Text>
-          <Text>🐙</Text>
-        </Slide>
-        <Slide>
-          <Heading size={2}>Renderer Exploration</Heading>
-          <Text>The <Code>Renderer</Code> object wraps the <Code>Stage</Code></Text>
-          <Text><Code>IRendererable</Code> objects are collected and rendered by the <Code>Renderer</Code></Text>
-          <Text>The <Code>IRendererable</Code> abstraction holds all state data for rendering</Text>
-          <Text>🐳</Text>
-        </Slide>
-        <Slide>
-          <Heading size={2}>Partition &amp; Traverser</Heading>
-          <Text>A <Code>Traverser</Code> object is used to collect <Code>Entity</Code> objects from a <Code>Partition</Code></Text>
-          <Text>Pertitions are created and managed by the <Code>View</Code>, and updated by the <Code>Scene</Code></Text>
-          <Text>Both <Code>Renderer</Code> and <Code>RayCastPicker</Code> traverse partitions</Text>
-          <Text>🐡</Text>
-        </Slide>
-        <Slide>
-          <Text>Break</Text>
-        </Slide>
-        <Slide>
-          <Heading size={2}>Freeform hour</Heading>
-        </Slide>
-        <Slide>
-          <Text>End of day 1</Text>
+          </Heading>
         </Slide>
       </Deck>
     );
