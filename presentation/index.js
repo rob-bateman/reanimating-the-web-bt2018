@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Notes,
   BlockQuote,
   Cite,
   Deck,
@@ -62,9 +63,19 @@ const images = {
   webgllogo: require('../assets/2000px-WebGL_Logo_light.svg.png'),
   typescriptlogo: require('../assets/uRLunzU-5492.png'),
   awayjslogo: require('../assets/awayjslogo-5276.png'),
+  awayjsexamples1: require('../assets/demos/Screenshot 2018-02-27 00.13.56-5687.png'),
+  awayjsexamples2: require('../assets/demos/Screenshot 2018-02-27 00.14.42-5690.png'),
+  awayjsexamples3: require('../assets/demos/Screenshot 2018-02-27 00.16.41-5695.png'),
+  awayjsexamples4: require('../assets/demos/Screenshot 2018-02-27 00.17.07-5730.png'),
+  awayjsexamples5: require('../assets/demos/Screenshot 2018-02-27 00.15.13-5694.png'),
+  awayjsexamples6: require('../assets/demos/Screenshot 2018-02-27 00.17.23-5691.png'),
+  awayjsexamples7: require('../assets/demos/Screenshot 2018-02-27 00.14.17-5688.png'),
+  awayjsexamples8: require('../assets/demos/Screenshot 2018-02-27 00.15.47-5692.png'),
+  awayjsexamples9: require('../assets/demos/Screenshot 2018-02-27 00.18.25-5689.png'),
   icycle1: require('../assets/pasted-image-1335.jpg'),
   icycle2: require('../assets/icycle_01-1397.png'),
   icycle3: require('../assets/icycle_02-1404.png'),
+  icycle4: require('../assets/Screenshot 2016-09-03 23.30.30-2929.png'),
   dennis: require('../assets/Icycle2_AwayJS-1439.png'),
   dennis_tris: require('../assets/Icycle2_AwayJS-1439_tris.png'),
   icycle1_tris: require('../assets/Screenshot 2016-09-01 02.57.01-2343.png'),
@@ -76,6 +87,8 @@ const images = {
   mathswhizz_screenshot1: require('../assets/Screenshot 2018-02-27 11.59.12-6044.png'),
   mathswhizz_screenshot2: require('../assets/Screenshot 2018-02-27 12.00.02-6056.png'),
   mathswhizz_screenshot3: require('../assets/Screenshot 2018-02-27 12.00.54-6064.png'),
+  vr_headset: require('../assets/maxresdefault.jpg'),
+  svg_lotr: require('../assets/lotr_interaction.gif'),
 };
 
 export default class Presentation extends React.Component {
@@ -83,6 +96,15 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["fade"]} transitionDuration={500} theme={theme}>
         <Slide bgDarken='0.7' bgImage={images.background}>
+          <Notes>
+            <h4>Agenda</h4>
+            <ol>
+              <li>Bit of background</li>
+              <li>Starting point for AwayJS</li>
+              <li>Progression</li>
+              <li>Future Plans</li>
+            </ol>
+          </Notes>
           <Heading size={1} fit>Reanimating the Web</Heading>
           <Heading size={3}>
             <Link href="https://www.twitter.com/robnet">
@@ -91,6 +113,14 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide bgImage={images.futurama}>
+          <Notes>
+            <h4>Background</h4>
+            <ol>
+              <li>Not a nostalgia trip</li>
+              <li>No tech is immortal</li>
+              <li>Technique more important than tricks</li>
+            </ol>
+          </Notes>
         </Slide>
         <Slide bgImage={images.showreel1}>
         </Slide>
@@ -107,6 +137,24 @@ export default class Presentation extends React.Component {
         <Slide bgImage={images.showreel7}>
         </Slide>
         <Slide bgImage={images.pepperflash}>
+          <Notes>
+            <h4>Sea change</h4>
+            <ol>
+              <li>How do we improve</li>
+              <li>What do we use</li>
+            </ol>
+          </Notes>
+        </Slide>
+        <Slide bgDarken='0.7'  bgImage={images.nyan}>
+          <Notes>
+            <h4>Favourite job</h4>
+            <ol>
+              <li>Best platform?</li>
+              <li>Best adaption?</li>
+              <li>Best presentation?</li>
+            </ol>
+          </Notes>
+          <Heading size={1}>Conversion</Heading>
         </Slide>
         <Slide>
           <Image src={images.webgllogo}/>
@@ -117,6 +165,26 @@ export default class Presentation extends React.Component {
           <Image src={images.awayjslogo} height="300px"/>
           <Heading size={3} padding="20px">
             <Link href="https://github.com/awayjs">http://github.com/awayjs</Link>
+          </Heading>
+        </Slide>
+        <Slide>
+          <Layout>
+            <Link href="../awayjs-examples-bin/AWDSuzanne.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples1} height="180px"/></Link>
+            <Link href="../awayjs-examples-bin/Intermediate_AWDViewer.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples2} height="180px"/></Link>
+            <Link href="../awayjs-examples-bin/Intermediate_PerelithKnight.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples3} height="180px"/></Link>
+          </Layout>
+          <Layout>
+            <Link href="../awayjs-examples-bin/CubePrimitive.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples4} height="180px"/></Link>
+            <Link href="../awayjs-examples-bin/Intermediate_Globe.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples5} height="180px"/></Link>
+            <Link href="../awayjs-examples-bin/ObjLoaderMasterChief.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples6} height="180px"/></Link>
+          </Layout>
+          <Layout>
+            <Link href="../awayjs-examples-bin/Basic_Fire.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples7} height="180px"/></Link>
+            <Link href="../awayjs-examples-bin/Intermediate_MonsterHeadShading.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples8} height="180px"/></Link>
+            <Link href="../awayjs-examples-bin/Intermediate_ParticleExplosions.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples9} height="180px"/></Link>
+          </Layout>
+          <Heading size={3} padding="20px">
+            <Link href="https://www.github.com/awayjs/awayjs-examples">github.com/awayjs/awayjs-examples</Link>
           </Heading>
         </Slide>
         {/* <Slide>
@@ -134,9 +202,23 @@ export default class Presentation extends React.Component {
           </Table>
         </Slide> */}
         <Slide bgDarken='0.7'  bgImage={images.nyan}>
+          <Notes>
+            <h4>New direction</h4>
+            <ol>
+              <li>High-res performance</li>
+              <li>Under-represented</li>
+            </ol>
+          </Notes>
           <Heading size={1}>Vectors</Heading>
         </Slide>
         <Slide bgImage={images.icycle1}>
+          <Notes>
+            <h4>Compilation step</h4>
+            <ol>
+              <li>Code conversion (AS2 -> JS)</li>
+              <li>Shape conversion (Bezier -> vertex buffer</li>
+            </ol>
+          </Notes>
         </Slide>
         <Slide bgImage={images.icycle2}>
         </Slide>
@@ -151,8 +233,20 @@ export default class Presentation extends React.Component {
             <Link href="../awayjs-examples-bin/AWD3ViewerMinimal.html">Tessellations whatcha want</Link>
         </Heading>
         </Slide>
+        <Slide bgImage={images.icycle4} align="center flex-end">
+          <Heading size={3} padding="30px">
+            <Link href="../icyle_web_bin/index.html">Icycle 2</Link>
+          </Heading>
+        </Slide>
         <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Heading size={1}>2D &amp; 3D</Heading>
+          <Notes>
+            <h4>2D and 3D together</h4>
+            <ol>
+              <li>Universal interactive model</li>
+              <li>Flexibile content arrangement</li>
+            </ol>
+          </Notes>
+          <Heading size={1}>Generalisation</Heading>
         </Slide>
         <Slide>
           <Image src={images.sunflower} height="200px" padding="20px"/>
@@ -166,10 +260,17 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Heading size={1}>Imports &amp; Optimisation</Heading>
+          <Notes>
+            <h4>Speed improvements to download and runtime</h4>
+            <ol>
+              <li>Tesslation on the fly</li>
+              <li>Dynamic caching of shapes &amp; fonts</li>
+            </ol>
+          </Notes>
+          <Heading size={1}>Optimisation</Heading>
         </Slide>
         <Slide>
-          <Image src={images.mathswhizz} height="200px" padding="20px"/>
+          <Image src={images.mathswhizz} height="300px" padding="20px"/>
           <Layout>
             <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=1" margin="30px"><Image src={images.mathswhizz_screenshot1} height="200px"/></Link>
             <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=5" margin="30px"><Image src={images.mathswhizz_screenshot2} height="200px"/></Link>
@@ -180,10 +281,24 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Heading size={1}>Future steps</Heading>
+          <Notes>
+            <h4>AwayJS application focus</h4>
+            <ol>
+              <li>WebVR content with AwayJS interfaces</li>
+              <li>Abstracting an SVG loader</li>
+            </ol>
+          </Notes>
+          <Heading size={1}>Future</Heading>
+        </Slide>
+        <Slide bgImage={images.vr_headset}>
+        </Slide>
+        <Slide bgImage={images.svg_lotr}>
         </Slide>
         <Slide bgDarken='0.7' bgImage={images.background}>
           <Heading size={1}>Thank you</Heading>
+          <Heading size={3} padding="20px">
+            <Link href="https://github.com/awayjs">http://github.com/awayjs</Link>
+          </Heading>
           <Heading size={3}>
             <Link href="https://www.twitter.com/robnet">
               @robnet
