@@ -79,10 +79,12 @@ const images = {
   dennis: require('../assets/Icycle2_AwayJS-1439.png'),
   dennis_tris: require('../assets/Icycle2_AwayJS-1439_tris.png'),
   icycle1_tris: require('../assets/Screenshot 2016-09-01 02.57.01-2343.png'),
+  drawing: require('../assets/Screenshot 2018-02-27 12.26.36-6202.png'),
   sunflower: require('../assets/sunflower.png'),
   sunflower_screenshot1: require('../assets/Screenshot 2018-02-27 11.41.47-5973.png'),
   sunflower_screenshot2: require('../assets/Screenshot 2018-02-27 11.43.39-5978.png'),
   sunflower_screenshot3: require('../assets/Screenshot 2018-02-27 11.48.42-5987.png'),
+  shumway: require('../assets/shumway_flash_logo-6110.png'),
   mathswhizz: require('../assets/maths-whizz_with_cubes_on_top-6037.png'),
   mathswhizz_screenshot1: require('../assets/Screenshot 2018-02-27 11.59.12-6044.png'),
   mathswhizz_screenshot2: require('../assets/Screenshot 2018-02-27 12.00.02-6056.png'),
@@ -97,6 +99,11 @@ export default class Presentation extends React.Component {
       <Deck transition={["fade"]} transitionDuration={500} theme={theme}>
         <Slide bgDarken='0.7' bgImage={images.background}>
           <Notes>
+           <h4>Introduction</h4>
+            <ol>
+              <li>Open source work at the Away Foundation</li>
+              <li>Interest in interative 2D &amp; 3D</li>
+            </ol>
             <h4>Agenda</h4>
             <ol>
               <li>Bit of background</li>
@@ -235,7 +242,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgImage={images.icycle4} align="center flex-end">
           <Heading size={3} padding="30px">
-            <Link href="../icyle_web_bin/index.html">Icycle 2</Link>
+            <Link href="../icycle_web_bin/index.html">Icycle 2</Link>
           </Heading>
         </Slide>
         <Slide bgDarken='0.7'  bgImage={images.nyan}>
@@ -247,6 +254,11 @@ export default class Presentation extends React.Component {
             </ol>
           </Notes>
           <Heading size={1}>Generalisation</Heading>
+        </Slide>
+        <Slide bgImage={images.drawing}>
+          <Heading size={3} padding="30px">
+            <Link href="../awayjs-examples-bin/AWDBasicTests.html">Drawing API</Link>
+          </Heading>
         </Slide>
         <Slide>
           <Image src={images.sunflower} height="200px" padding="20px"/>
@@ -268,6 +280,8 @@ export default class Presentation extends React.Component {
             </ol>
           </Notes>
           <Heading size={1}>Optimisation</Heading>
+        </Slide>
+        <Slide bgImage={images.shumway}>
         </Slide>
         <Slide>
           <Image src={images.mathswhizz} height="300px" padding="20px"/>
